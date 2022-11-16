@@ -1,0 +1,99 @@
+\documentclass[14pt,a4paper,twoside]{extarticle}
+
+% package parameters
+\usepackage[left=2.5cm,right=2cm,top=2cm,bottom=4cm,bindingoffset=0cm,footskip=1.5cm]{geometry}
+
+% parapgraph indents
+\usepackage{indentfirst}
+\setlength\parindent{1.24cm}
+\renewcommand{\rmdefault}{ftm}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\small-~\thepage~-}
+
+% fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[russian]{babel}
+
+% interval
+\linespread{1.3}
+
+% graphics
+\usepackage{graphicx}
+\usepackage{float}
+
+% poetry
+\usepackage{verse}
+
+% epigraphs
+\usepackage{epigraph}
+\setlength{\epigraphrule}{0pt}
+\setlength{\epigraphwidth}{4.5cm}
+
+% increased letter spacing
+\usepackage{soulutf8}
+\sodef\so{}{.03em}{0.5em}{0pt}
+
+% spacings
+\usepackage{setspace}
+
+% special titles properties
+\usepackage{titlesec}
+\titleformat{\section}
+    {\normalfont\Large\bfseries\centering}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+\titleformat{\subsection}
+    {\normalfont\raggedleft}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}
+    {0pt}{1em}{1.5em}
+\titlespacing*{\subsubsection}
+    {0pt}{2.5em}{0.5em}
+
+% toc styling
+\usepackage{titletoc}
+\titlecontents{section}
+    [0pt]
+    {}
+    {\contentsmargin{0pt}\thecontentslabel\enspace}
+    {\contentsmargin{0pt}}
+    {\titlerule*[1em]{.}\contentspage}
+    []
+
+\titlecontents{subsection}
+    [1em]
+    {\vspace{-0.01em}}
+    {\contentsmargin{0pt}\thecontentslabel\enspace}
+    {\contentsmargin{0pt}}
+    {\titlerule*[1em]{.}\contentspage}
+    []
+
+% toc title
+\addto\captionsrussian{
+  \renewcommand{\contentsname}
+    {СОДЕРЖАНИЕ}
+}
+
+% custom commands
+\input{./steroids.latex}
+
+\begin{document}
+
+\setcounter{page}{3}
+
+\input{./intro.latex}
+
+\input{./poetry.latex}
+
+% forbid widows and orphans
+\widowpenalty=10000
+\clubpenalty=10000
+
+\input{./prose.latex}
+
+\input{./authors.latex}
+
+\input{./toc.latex}
+
+\end{document}

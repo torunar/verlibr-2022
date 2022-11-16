@@ -1,0 +1,53 @@
+% title of a section
+\newcommand{\ssection}[2][]{
+    \clearpage
+    \section*{
+        \so{#2}
+    }
+    \addcontentsline{toc}{section}{#1}
+}
+
+% author name
+\newcommand{\aauthor}[2][\clearpage]{{
+    #1
+    \subsection*{
+        \textit{#2}
+    }
+    \addcontentsline{toc}{subsection}{#2}
+}}
+
+% title
+\newcommand{\ttitle}[1]{
+    \subsubsection*{
+        \centering
+        \so{#1}
+    }
+}
+
+% subtitle
+\newcommand{\subttitle}[1]{
+    \subsubsection*{
+        \centering
+        \so{#1}
+    }
+}
+
+% image
+\newcommand{\img}[2][\textwidth]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#1]{./img/#2}
+    \end{figure}
+}
+
+% image with space before
+\newcommand{\imgv}[3][\textwidth]{
+    \newpage
+    \hbox{\vspace{#3}}
+    \img[#1]{#2}
+}
+
+% roman
+\newcommand*{\rom}[1]{
+    \MakeUppercase{\romannumeral #1}
+}
