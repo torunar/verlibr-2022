@@ -1,1 +1,5 @@
 \ssection[Поэзия]{ПОЭЗИЯ}
+
+\input{./poetry/ganaev.latex}
+\input{./poetry/evstigneeva.latex}
+\input{./poetry/shalashova.latex}
