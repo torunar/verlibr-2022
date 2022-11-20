@@ -5,3 +5,6 @@
 \input{./poetry/shalashova.latex}
 \input{./poetry/akulinina.latex}
 \input{./poetry/sklyar.latex}
+\input{./poetry/alekseeva.latex}
+\input{./poetry/vinogradova.latex}
+\input{./poetry/godver.latex}
