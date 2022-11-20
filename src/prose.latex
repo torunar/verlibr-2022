@@ -1,1 +1,4 @@
 \ssection[Проза]{ПРОЗА}
+
+\input{./prose/danilyanc.latex}
+\input{./prose/tarakannikova.latex}
